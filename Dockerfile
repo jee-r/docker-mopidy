@@ -40,7 +40,7 @@ RUN apk update && \
         Mopidy-Podcast \
         Mopidy-YouTube && \
     apk del --purge build-dependencies && \
-    rm -rf /tmp/* && \
+    rm -rf /tmp/* 
 
 WORKDIR /config
 
