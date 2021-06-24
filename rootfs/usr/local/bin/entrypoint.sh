@@ -3,7 +3,7 @@
 if [ -d /config ]; then
     if [ ! -f /config/mopidy.conf ]; then
         cp /etc/default/mopidy.conf /config/mopidy.conf
-        mkdir -p /config/{cache,data,images,iris,playlists}
+        mkdir -p /config/cache /config/data /config/images
     fi
 else
     echo 'Please mount /config directory' >> /proc/self/fd/1
