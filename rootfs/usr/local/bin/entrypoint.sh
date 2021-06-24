@@ -2,7 +2,7 @@
 
 if [ -d /config ]; then
     if [ ! -f /config/mopidy.conf ]; then
-        cp /config_default/mopidy.conf /config/mopidy.conf
+        cp /etc/default/mopidy.conf /config/mopidy.conf
         mkdir -p /config/{cache,data,images,iris,playlists}
     fi
 else
