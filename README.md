@@ -36,7 +36,7 @@ docker run \
     --env TZ=Europe/Paris \
     --env HOME=/config \
     --publish 6600:6600 \
-    --publish 6680;6680 \
+    --publish 6680:6680 \
     --publish 5555:5555/udp \
     j33r/mopidy:latest
 ```
@@ -69,12 +69,13 @@ services:
 
 ## Volumes
 
-`/config`: If you mount this directory you must provide a `icecast.xml` configuration file in it
+`/config`: If you mount this directory you must provide a `mopidy.conf` configuration file in it
 `/media`: Directory where your media files are stored (mp3,flac,ogg...)
 
 ## Config
 
-By default image is running mopidy with this [default config](rootfs/config/mopidy.conf). 
+By default image is running mopidy with this [default config](rootfs/etc/default/mopidy.conf). 
+When container start if `/config` directory is mounted and `/config/mopidy.conf` don't exist [`entrypoint.sh` script](rootfs/usr/local/bin/entrypoint.sh) will copy default config and create neccesary directories in it. 
 
 ## Environment variables
 

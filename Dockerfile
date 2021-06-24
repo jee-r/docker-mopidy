@@ -39,6 +39,7 @@ RUN apk update && \
         Mopidy-Jamendo \
         Mopidy-Podcast \
         Mopidy-YouTube && \
+    chmod +x /usr/local/bin/entrypoint.sh && \
     apk del --purge build-dependencies && \
     rm -rf /tmp/* 
 
@@ -47,4 +48,4 @@ WORKDIR /config
 EXPOSE 6600 6680 5555/udp
 
 STOPSIGNAL SIGQUIT
-ENTRYPOINT ["/usr/bin/mopidy", "--config", "/config/mopidy.conf"]
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
