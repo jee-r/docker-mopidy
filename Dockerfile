@@ -35,6 +35,7 @@ RUN apk update && \
         #git+https://github.com/sapristi/mopidy-mowecl.git \
         Mopidy-Mowecl==0.4.0 \
         Mopidy-Iris \
+        Mopidy-Subidy \
         mopidy-funkwhale \
         Mopidy-Jamendo \
         Mopidy-Podcast \
