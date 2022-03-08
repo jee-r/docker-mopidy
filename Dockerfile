@@ -1,10 +1,11 @@
-FROM alpine:3.14
+FROM alpine:3.15
 
 LABEL name="docker-mopidy" \
       maintainer="Jee jee@jeer.fr" \
       description="Mopidy is an extensible music server written in Python." \
       url="https://mopidy.com" \
-      org.label-schema.vcs-url="https://github.com/jee-r/docker-mopidy"
+      org.label-schema.vcs-url="https://github.com/jee-r/docker-mopidy" \
+      org.opencontainers.image.source="https://github.com/jee-r/docker-mopidy"
 
 COPY rootfs /
 
