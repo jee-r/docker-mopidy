@@ -1,4 +1,4 @@
-FROM alpine:3.15
+FROM alpine:3.17
 
 LABEL name="docker-mopidy" \
       maintainer="Jee jee@jeer.fr" \
@@ -6,13 +6,14 @@ LABEL name="docker-mopidy" \
       url="https://mopidy.com" \
       org.label-schema.vcs-url="https://github.com/jee-r/docker-mopidy" \
       org.opencontainers.image.source="https://github.com/jee-r/docker-mopidy"
-
+      
 COPY rootfs /
 
 RUN apk update && \
     apk upgrade && \
     apk add --upgrade --no-cache --virtual=build-dependencies \
-        gcc && \
+        build-base \
+        musl && \
     apk add --upgrade --no-cache --virtual=base \
         python3 \
         python3-dev \
@@ -23,18 +24,20 @@ RUN apk update && \
         py3-requests \
         py3-cryptography \
         py3-openssl \
+        #py3-ruamel.yaml.clib \
         gstreamer \
         gstreamer-tools \
         gst-plugins-base \
         gst-plugins-good \
         gst-plugins-ugly && \
-    pip3 install --upgrade --no-cache-dir \
+    pip3 install --upgrade --no-cache-dir --use-pep517 \
         mopidy \
         Mopidy-Local \
         Mopidy-MPD \
         #mopidy-spotify \
         #git+https://github.com/sapristi/mopidy-mowecl.git \
-        Mopidy-Mowecl==0.4.0 \
+        #Mopidy-Mowecl==0.4.0 \
+        Mopidy-Mowecl \
         Mopidy-Iris \
         Mopidy-Subidy \
         mopidy-funkwhale \
