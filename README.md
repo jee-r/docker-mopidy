@@ -1,10 +1,11 @@
 # mopidy docker image
 
-[![Drone (cloud)](https://img.shields.io/drone/build/jee-r/docker-mopidy?&style=flat-square)](https://cloud.drone.io/jee-r/docker-mopidy)
 [![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/j33r/mopidy?style=flat-square)](https://microbadger.com/images/j33r/mopidy)
-[![MicroBadger Layers](https://img.shields.io/microbadger/layers/j33r/mopidy?style=flat-square)](https://microbadger.com/images/j33r/mopidy)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/jee-r/docker-mopidy/deploy.yaml?branch=main&style=flat-square)
 [![Docker Pulls](https://img.shields.io/docker/pulls/j33r/mopidy?style=flat-square)](https://hub.docker.com/r/j33r/mopidy)
-[![DockerHub](https://shields.io/badge/Dockerhub-j33r/mopidy-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mopidy)
+[![DockerHub](https://img.shields.io/badge/Dockerhub-j33r/mopidy-%232496ED?logo=docker&style=flat-square)](https://hub.docker.com/r/j33r/mopidy)
+[![ghcr.io](https://img.shields.io/badge/ghrc%2Eio-jee%2D-r/mopidy-%232496ED?logo=github&style=flat-square)](https://ghcr.io/jee-r/mopidy)
+
 
 A docker image for [mopidy](https://mopidy.com/) based on [Alpine Linux](https://alpinelinux.org) and **[without root process](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#user)**
 
