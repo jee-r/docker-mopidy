@@ -24,7 +24,6 @@ RUN apk update && \
         py3-requests \
         py3-cryptography \
         py3-openssl \
-        #py3-ruamel.yaml.clib \
         gstreamer \
         gstreamer-tools \
         gst-plugins-base \
@@ -41,8 +40,10 @@ RUN apk update && \
         Mopidy-Iris \
         Mopidy-Subidy \
         mopidy-funkwhale \
+        Mopidy-Bandcamp \
         Mopidy-Jamendo \
         Mopidy-Podcast \
+        Mopidy-InternetArchive \
         Mopidy-YouTube && \
     chmod +x /usr/local/bin/entrypoint.sh && \
     apk del --purge build-dependencies && \
