@@ -18,10 +18,15 @@ RUN apk update && \
         python3 \
         python3-dev \
         py3-pip \
-        py3-gst \
+	py3-dbus \
+	py3-gst \
+	py3-libxml2 \
+	py3-pykka \
+	py3-requests \
+	py3-setuptools \
+	py3-tornado \
         py3-six\
         py3-asn1 \
-        py3-requests \
         py3-cryptography \
         py3-openssl \
         gstreamer \
